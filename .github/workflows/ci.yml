@@ -66,6 +66,13 @@ jobs:
           path: CRMDatabasePG
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Checkout crm-infra (dev JWT token minting scripts)
+        uses: actions/checkout@v4
+        with:
+          repository: Cy-Codes/crm-infra
+          path: crm-infra
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Setup .NET 10 SDK
         uses: actions/setup-dotnet@v4
         with:
